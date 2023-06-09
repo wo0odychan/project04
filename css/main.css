@@ -249,7 +249,7 @@
 
 .main_event .event {
     display: flex;
-    gap: 20px;
+    gap: 50px;
 }
 
 .main_event .right {
@@ -270,9 +270,20 @@
     word-break: keep-all;
 }
 
+@media (max-width:768px) {
+    .main_event .event {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main_event .event iframe {
+        width: 455px;
+    }
+}
+
 /* 푸터 */
 .footer {
-    background: #fff;
+    background: #f9f9f9;
     color: #444;
 }
 
@@ -316,5 +327,25 @@
     font-size: 20px;
     background: #a8a8a8;
     margin: 0 0 0 3px;
-    color: #fff;
+    color: #f9f9f9;
+}
+
+@media (max-width:768px) {
+    .footer {
+        height: 100px;
+    }
+
+    .footer .ft {
+        border: none;
+    }
+
+    .footer .list {
+        flex-direction: column;
+        align-items: center;
+        height: 80px;
+    }
+
+    .footer .list ul {
+        padding: 15px 0 0 0;
+    }
 }
